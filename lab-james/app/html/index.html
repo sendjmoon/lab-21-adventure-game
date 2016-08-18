@@ -1,12 +1,40 @@
-<html>
-<head>
-  <title> Adventure Time </title>
-  <script src="bundle.js"></script>
-  <link rel="stylesheet" href="bundle.css">
-</head>
+<!DOCTYPE html>
+<html ng-app="adventureApp">
+  <head>
+    <title> Adventure Time </title>
+    <script src="bundle.js"></script>
+    <link rel="stylesheet" href="bundle.css">
+  </head>
 
-<body>
-  <h1> ADVENTURE TIME! </h1>
-  <main>
-  </main>
-</body>
+  <body>
+    <h1> ADVENTURE TIME! </h1>
+    <main ng-controller="GameController as gameControl">
+
+      <form novalidate name="gameDirectionForm">
+        <label for="playerDirection"> Direction: </label>
+        <select name="playerDirection" ng-model="gameDirectionForm.direction">
+          <option ng-repeat="direction in gameControl.direction" ng-init="gameDirectionForm.direction='up'" value="{{direction}}">
+            {{ direction }}
+          </option>
+        </select>
+
+        <button type="button" ng-click="gameControl.moveDirection(gameDirectionForm.direction)">
+          Move
+        </button>
+
+        <button type="button" ng-click="gameControl.attackMonster()">
+          Attack
+        </button>
+
+        <button type="button" ng-click="gameControl.usePotion()">
+          Use Potion
+        </button>
+      </form>
+
+    <ol>
+      <li ng-repeat="item in gameControl.history track by item.id"> {{ item.message }} </li>
+    </ol>
+
+    </main>
+  </body>
+</html>

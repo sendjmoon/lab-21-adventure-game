@@ -13,7 +13,7 @@ module.exports = {
     new ExtractText('bundle.css')
   ],
   sassLoader: {
-    paths: [`${__dirname}/app/scss/lib`]
+    includePaths: [`${__dirname}/app/scss/lib`]
   },
   postcss: function() {
     return [autoPrefixer];
