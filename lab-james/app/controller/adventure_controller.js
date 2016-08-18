@@ -84,7 +84,10 @@ function GameController() {
       }
       return;
     }
-    this.logHistory('No monster to attack.');
+    if (monster.alive === undefined || !monster.alive) {
+      this.logHistory('No monster to attack.');
+      return;
+    }
   };
 
   this.usePotion = function() {

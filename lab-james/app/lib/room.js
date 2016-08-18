@@ -8,7 +8,7 @@ module.exports = {
     down: 'roomB',
     left: 'wall',
     right: 'wall',
-    monster: undefined
+    monster: 'none'
   },
   roomB: {
     up: 'roomA',

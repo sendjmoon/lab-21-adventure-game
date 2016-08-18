@@ -20,5 +20,21 @@ p {
 ol li {
   margin: 0 auto;
   text-align: center;
+  border: 1px dotted black;
+  border-radius: 2px;
   width: 30%;
+  font-size: $app-font-size-content;
+  background-color: $app-font-primary-color;
+  color: black;
+}
+
+label {
+  color: black;
+}
+
+select, button {
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: $app-font-primary-color;
+  color: black;
 }
