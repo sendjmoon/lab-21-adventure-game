@@ -20,7 +20,6 @@ function GameController() {
     location: 'roomA',
     maxHealth: 10,
     health: 10,
-    weapon: 'fist',
     attackPower: 4,
     potionCount: 1,
     alive: true
