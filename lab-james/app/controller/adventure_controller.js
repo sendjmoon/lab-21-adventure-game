@@ -5,18 +5,15 @@ const adventureApp = angular.module('adventureApp');
 
 adventureApp.controller('GameController', ['$log', GameController]);
 
-function GameController() {
-  this.history = [
-    {
-      id: 0,
-      message: 'Starting in RoomA.'
-    }
-  ];
+function GameController($log) {
+  $log.log('Game loaded.');
+
+  this.history = [{id: 0, message: 'Starting in RoomA.'}];
   this.direction = ['up', 'down', 'left', 'right'];
   this.room = require('../lib/room.js');
 
   this.player = {
-    name: 'player1',
+    name: 'Shrek',
     location: 'roomA',
     maxHealth: 10,
     health: 10,
@@ -33,12 +30,10 @@ function GameController() {
     if (this.room[this.player.location]) {
       let currentLocation = this.room[this.player.location];
       let nextMove = currentLocation[direction];
-
       if (nextMove !== 'wall') {
         this.player.location = nextMove;
         this.logHistory(this.player.name + ' moved to ' + nextMove);
         currentLocation = this.room[nextMove];
-
         if (!currentLocation.monster || !currentLocation.monster.alive) {
           this.logHistory('There are no monsters in this room.');
         }
