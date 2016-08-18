@@ -3,8 +3,22 @@
 @import './lib/_theme';
 
 html body {
+  margin: 0 auto;
+  text-align: center;
   width: 100%;
   height: 100%;
   background-color: $app-bg-primary-color;
   color: $app-font-primary-color;
+}
+
+p {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+ol li {
+  margin: 0 auto;
+  text-align: center;
+  width: 30%;
 }

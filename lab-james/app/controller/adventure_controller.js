@@ -9,7 +9,7 @@ function GameController() {
   this.history = [
     {
       id: 0,
-      message: 'Welcome to the game.'
+      message: 'Starting in RoomA.'
     }
   ];
   this.direction = ['up', 'down', 'left', 'right'];
