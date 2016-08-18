@@ -80,7 +80,7 @@ function GameController() {
         this.logHistory(player.name + ' has ' + player.health + ' health remaining.');
       }
       if (player.health <= 0) {
-        this.logHistory('lol sucks ' + monster.name + ' defeated you.');
+        this.logHistory('GG you\'re dead. Better luck next time.');
         player.alive = false;
       }
       return;
@@ -94,7 +94,7 @@ function GameController() {
       return;
     }
     if (this.player.potionCount === 0) {
-      this.logHistory('You have no more potions to use. You\'re screwed!');
+      this.logHistory('You have no more potions to use. GG.');
       return;
     }
     if (this.player.potionCount > 0) {
