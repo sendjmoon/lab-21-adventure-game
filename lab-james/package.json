@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/eslint/.bin/eslint ./app/** config.webpack.js",
+    "lint": "./node_modules/.bin/eslint ./app/** webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot"
   },
